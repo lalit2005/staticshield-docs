@@ -1,18 +1,25 @@
 export default {
-  repository: 'https://github.com/shuding/nextra',
-  titleSuffix: ' – Nextra',
+  repository: 'https://github.com/lalit2005/staticshield',
+  titleSuffix: ' Documentation',
   logo: (
     <>
-      <span className="mr-2 font-extrabold hidden md:inline">Nextra</span>
-      <span className="text-gray-600 font-normal hidden md:inline">
-        The Next.js Site Builder
-      </span>
+      <img
+        src="https://staticshield.vercel.app/staticshield.png"
+        style={{
+          height: '25px',
+          width: '25px',
+          marginRight: '10px',
+        }}
+        alt="asd"
+      />
+      <span className="mr-2 font-extrabold hidden md:inline">StaticShield</span>
+      <span className="mr-2 hidden text-gray-600 md:inline">Documentation</span>
     </>
   ),
   head: (
     <>
       <meta name="msapplication-TileColor" content="#ffffff" />
-      <meta name="theme-color" content="#ffffff" />
+      <meta name="theme-color" content="#78f8e1" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Language" content="en" />
       <meta name="description" content="Nextra: the Next.js site builder" />
@@ -61,5 +68,5 @@ export default {
   nextLinks: true,
   footer: true,
   footerEditOnGitHubLink: true,
-  footerText: <>MIT {new Date().getFullYear()} © Nextra.</>,
+  footerText: <>MIT {new Date().getFullYear()} © StaticShield.</>,
 }

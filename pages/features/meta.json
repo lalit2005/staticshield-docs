@@ -1,5 +1,3 @@
 {
-  "mdx": "Markdown and React",
-  "ssg": "SSG Support",
-  "i18n": "I18n"
+  "framework-agnostic": "Framework agnostic"
 }
