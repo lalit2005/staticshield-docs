@@ -2,5 +2,7 @@
   "nextjs-11": "Nextjs 11",
   "nextjs": "Nextjs",
   "svelte": "Svelte",
-  "sveltekit": "Svelte Kit"
+  "sveltekit": "Svelte Kit",
+  "vue": "Vue.js",
+  "html": "HTML"
 }

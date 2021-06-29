@@ -4,9 +4,7 @@ import Head from 'next/head'
 export default function Nextra({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <base href="https://staticshield-docs.vercel.app/" />
-      </Head>
+      <Head>{/* <base href="https://staticshield-docs.vercel.app/" /> */}</Head>
       <Component {...pageProps} />
     </>
   )
