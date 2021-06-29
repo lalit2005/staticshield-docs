@@ -1,5 +1,6 @@
 import Box from '../../components/Box'
 import Callout from 'nextra-theme-docs/callout'
+import Bleed from 'nextra-theme-docs/bleed'
 import NextjsDemo from '../../components/NextjsDemo'
 
 # StaticShield + Nextjs
@@ -23,7 +24,9 @@ to the top level div. That's it. Really!
   below, the `staticshield-div` is not required!
 </Callout>
 
-<NextjsDemo />
+<Bleed>
+  <NextjsDemo />
+</Bleed>
 
 You can find the snippet in the dashbaord under the Nextjs section
 
@@ -98,7 +101,7 @@ You will have to follow the same steps above to get everything right
 
 A password protected Nextjs app's `_app.js` looks like
 
-```js highlight=9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25
+```js highlight=10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26
 // pages/_app.js
 
 import '../styles/globals.css'

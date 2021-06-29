@@ -3,7 +3,7 @@ export default function Box(props) {
   ;({ t, r, b, l } = props)
   return (
     <div
-      style={{
+      styles={{
         marginTop: t + 'px',
         marginRight: r + 'px',
         marginBottom: b + 'px',
