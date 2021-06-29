@@ -4,5 +4,6 @@
   "svelte": "Svelte",
   "sveltekit": "Svelte Kit",
   "vue": "Vue.js",
+  "nuxtjs": "Nuxt.js",
   "html": "HTML"
 }

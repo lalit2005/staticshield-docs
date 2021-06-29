@@ -12,8 +12,8 @@ export default {
         }}
         alt="asd"
       />
-      <span className="mr-2 font-extrabold hidden md:inline">StaticShield</span>
-      <span className="mr-2 hidden text-gray-600 md:inline">Documentation</span>
+      <span className="hidden mr-2 font-bold md:inline">StaticShield</span>
+      <span className="hidden mr-2 text-gray-600 md:inline">Documentation</span>
     </>
   ),
   head: (
@@ -22,8 +22,14 @@ export default {
       <meta name="theme-color" content="#78f8e1" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Language" content="en" />
-      <meta name="description" content="Nextra: the Next.js site builder" />
-      <meta name="og:description" content="Nextra: the Next.js site builder" />
+      <meta
+        name="description"
+        content="StaticShield Docs: Easiest way to password protect websites"
+      />
+      <meta
+        name="og:description"
+        content="StaticShield Docs: Easiest way to password protect websites"
+      />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:image" content="https://nextra.vercel.app/og.png" />
       <meta name="twitter:site:domain" content="nextra.vercel.app" />
@@ -61,6 +67,11 @@ export default {
         href="/favicon-16x16.png"
       />
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+      <style>{`
+        html {
+          font-family: Inter, system-ui, sans-serif !important;
+        }
+      `}</style>
     </>
   ),
   search: true,

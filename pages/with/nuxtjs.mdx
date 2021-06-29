@@ -1,0 +1,130 @@
+import Box from '../../components/Box'
+import Callout from 'nextra-theme-docs/callout'
+import Bleed from 'nextra-theme-docs/bleed'
+
+# StaticShield + Nuxtjs
+
+<Bleed>
+  <img src="/banners/nuxtjs.png" width="400px" />
+</Bleed>
+
+## Protect a single page
+
+You should just paste a snippet in that page that you want to password protect and add a `staticshield-div`
+to the top level div. That's it. Really!
+
+<Callout emoji="💡">
+  If your page is very lightweight, includes no heavy javascript, and you are
+  sure that javascript runs before the HTML renders as shown in the demo video
+  below, the `staticshield-div` is not required!
+</Callout>
+
+You can find the snippet in the dashbaord under the `NuxtJS` section
+
+<Box t={30} b={30} l={-10}>
+  <img src="/snippets/nuxtjs.png" width="1000px" />
+</Box>
+
+And also don't forget to add `staticshield-div` class to the top level `div` of the page.
+
+Finally a password protected Nuxt.js web page looks like
+
+```js highlight=7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25
+// pages/protected.vue
+
+<template>
+  <div class="staticshield-div">
+    <!-- ... -->
+  </div>
+</template>
+
+<script>
+  export default {
+    head() {
+      return {
+        title: 'StaticShield + Nuxtjs',
+        script: [
+          {
+            hid: 'staticshield',
+            src: 'https://staticshield.vercel.app/script.js',
+            'data-site-id': 'fbe1e7da-d79b-4265-8209-a14f099d838e',
+            'data-cap': 'The password is 123test123',
+          },
+        ],
+      }
+    },
+  }
+</script>
+
+<style>
+  .staticshield-div {
+    display: none;
+  }
+</style>
+```
+
+The highlighted part of code snippet is provided by StaticShield and all you have to do is just add that `staticshield-div`
+class name to the top level `div` in `template`.
+
+<Callout emoji="⚠️">
+  If `staticshield-div` class is not assigned to the top level `div`, the user
+  will see a flash of **password protected content** while the page loads
+  initially.
+</Callout>
+
+## Password protect a whole app
+
+Password protecting a whole app is just as easy as protecting a single page.
+
+You will have to add the same script on the `<head>` of `layout/default.vue` of the Nuxt app.
+
+A password protected Vue app's `layout/default.vue` looks like
+
+```js highlight=10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
+// layout/default.vue
+
+<template>
+  <div>
+    <Nuxt />
+  </div>
+</template>
+
+<script>
+export default {
+  head() {
+    return {
+      title: 'StaticShield + Nuxtjs',
+      script: [
+        {
+          hid: 'staticshield',
+          src: 'https://staticshield.vercel.app/script.js',
+          'data-site-id': '<DATA-SITE-ID>',
+          'data-cap': '<CAPTION>',
+        },
+      ],
+    }
+  },
+}
+</script>
+
+<style>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+.button--green {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #3b8070;
+  color: #3b8070;
+  text-decoration: none;
+  padding: 10px 30px;
+}
+</style>
+```
+
+<Callout>
+	The `<DATA-SITE-ID>` and `<CAPTION>` fields will be prefilled in the dashbaord. You will just have to copy paste 😍
+</Callout>
