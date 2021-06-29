@@ -1,3 +1,6 @@
 {
-  "nextjs-11": "Nextjs 11"
+  "nextjs-11": "Nextjs 11",
+  "nextjs": "Nextjs",
+  "svelte": "Svelte",
+  "sveltekit": "Svelte Kit"
 }
