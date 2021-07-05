@@ -5,7 +5,7 @@ export default function Nextra({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <base href="/" />
+        <base href="https://staticshield-docs.vercel.app/" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
